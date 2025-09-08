@@ -12,8 +12,11 @@ A father figure for those who grew up without one 👨🏻
 DadGPT is an AI designed for men who grew up without a reliable male role model.
 It offers a steady presence, practical advice, and direct answers to the questions we don't always dare to ask.
 It's an assistant built to feel like a father figure — someone you can talk to, ask questions, get guidance or support from — with no judgment, no pressure.
+
 You can talk about anything: relationships, career, self-confidence, emotions, life choices… He's here to guide you, listen to you, encourage you, or simply help you take a step back.
-No lectures, no clichés — just a stable, mature, and supportive presence. A mentor who listens. Available anytime, he helps you move forward, understand yourself and others better, and make clearer decisions.
+No lectures, no clichés — just a stable, mature, and supportive presence.
+
+A mentor who listens. Available anytime, he helps you move forward, understand yourself and others better, and make clearer decisions.
 For those who had to figure it out alone, it's a way to finally have a point of reference — step by step, at your pace.
 
 **DadGPT isn't a therapis**t — it's a support figure for those who never had one.
