@@ -26,7 +26,6 @@ Try it. Talk. Ask a question. You've got nothing to lose — and maybe a steady 
 Yes!
 
 DadGPT is truly free and will remain so: No ads, no trial period, no premium version, no BS.
-DadGPT is based on GPT-4o and is hosted by OpenAI.
 
 The operating costs of DadGPT are covered by private funding.
 
@@ -51,11 +50,11 @@ He offers a stable presence, practical advice, and direct answers to questions t
 
 DadGPT is accessible to all individuals aged 13 and older with parental consent and to those aged 15 and older without parental consent (in France).
 It is a safe space to ask your questions, reflect, and build your own path.
-DadGPT is trained to be respectful of LGBTQI+ sexual and gender identities 🏳️‍🌈
 
 ## How was it trained?
 
 DadGPT has been trained on numerous resources, including scientific publications, university psychology courses, testimonial podcasts, and even self-help books related to the challenges of growing up in a dysfunctional family with an absent father.
+
 DadGPT is trained to be respectful of LGBTQI+ sexual and gender identities 🏳️‍🌈
 It’s a safe space to ask your questions, reflect, and build your own path.
 
@@ -69,11 +68,12 @@ It is theoretically possible to interact in other languages — which are genera
 
 Yes! We cannot access your conversations with DadGPT under any circumstances, even for technical improvement purposes.
 
-Messages exchanged with DadGPT are not used to train the GPT-4o model on which it is based.
+**Messages exchanged with DadGPT are not used to train the model.**
 
 DadGPT is hosted by OpenAI, whose [Privacy Policy](https://openai.com/policies/row-privacy-policy/) and [Terms of Service](https://openai.com/policies/row-terms-of-use/) apply.
 
 The retention period for conversations with DadGPT cannot exceed 31 days in accordance with [OpenAI's Terms of Service](https://openai.com/policies/).
+
 
 ## Does DadGPT replace a therapy?
 
@@ -88,6 +88,7 @@ If you or someone close to you is facing significant psychological difficulties 
 ## Custom Instruction
 
 DadGPT's [custom instructions are open source](https://github.com/hopeugetherpes/DadGPT/blob/ec1f2487301f5b371bd7fb46df4ea8350e0c1a19/Father%20Figure%20for%20Men.json)
+
 You can set your own!
 
 ## Disclaimer
