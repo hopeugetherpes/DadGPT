@@ -17,14 +17,14 @@ export default function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             video.play().catch((err) => {
-              console.log("Autoplay failed:", err)
+              console.error("Autoplay failed:", err)
             })
           } else {
             video.pause()
           }
         })
       },
-      { threshold: 0.5 },
+      { threshold: 0.3 },
     )
 
     observer.observe(video)
@@ -158,7 +158,7 @@ export default function Home() {
                 ref={videoRef}
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DadGPT%20English-UkjqMDOIg53d6HE3CMg6OBie5I8Kna.mp4"
                 loop
-                muted={false}
+                muted
                 playsInline
                 className="w-full h-full object-cover"
               />
