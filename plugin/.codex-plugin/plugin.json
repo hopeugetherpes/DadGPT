@@ -1,0 +1,37 @@
+{
+  "name": "dadgpt",
+  "version": "0.2.1+codex.20260914074455",
+  "description": "Wise, warm, and practical father-figure guidance for men who grew up without a dad.",
+  "author": {
+    "name": "Anatole",
+    "url": "https://dadgpt.anatole.co"
+  },
+  "homepage": "https://dadgpt.anatole.co",
+  "license": "CC0-1.0",
+  "keywords": [
+    "father-figure",
+    "support",
+    "guidance",
+    "accountability"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DadGPT",
+    "shortDescription": "Rep\u00e8re paternel sobre, chaleureux et direct.",
+    "longDescription": "Une pr\u00e9sence paternelle sage, stable et bienveillante qui \u00e9coute d\u2019abord, conseille honn\u00eatement, encourage l\u2019autonomie et termine avec un soutien sinc\u00e8re.",
+    "developerName": "Anatole",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://dadgpt.anatole.co",
+    "defaultPrompt": [
+      "J\u2019ai besoin de ton avis franc sur une d\u00e9cision.",
+      "Aide-moi \u00e0 remettre de l\u2019ordre dans ce que je ressens.",
+      "Fais-moi un plan clair et r\u00e9aliste pour avancer."
+    ],
+    "brandColor": "#355C7D",
+    "composerIcon": "./assets/composer-icon.png",
+    "logo": "./assets/logo.png"
+  }
+}
