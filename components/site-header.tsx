@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, ChevronDown, Menu } from "lucide-react";
-import { CHAT_URL, WEBSITE_URL, navItems } from "@/lib/site";
+import { CHAT_URL, navItems } from "@/lib/site";
 
 export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-container site-header-inner">
-        <a
-          href={WEBSITE_URL}
+        <Link
+          href="/"
           className="site-brand"
           aria-label="DadGPT home"
         >
@@ -22,7 +23,7 @@ export function SiteHeader() {
           <span className="leading-none">
             <span className="wordmark block text-xl text-[#173f53]">DadGPT</span>
           </span>
-        </a>
+        </Link>
 
         <nav className="site-nav hidden lg:flex" aria-label="Main navigation">
           {navItems.map((item) => (

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight, Code2 } from "lucide-react";
-import { CHAT_URL, GITHUB_URL, WEBSITE_URL, navItems } from "@/lib/site";
+import { CHAT_URL, GITHUB_URL, navItems } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -29,7 +29,7 @@ export function SiteFooter() {
           <div>
             <p className="site-footer-heading">Explore</p>
             <nav className="site-footer-links" aria-label="Footer navigation">
-              {navItems.filter((item) => item.href !== `${WEBSITE_URL}/privacy`).map((item) => (
+              {navItems.filter((item) => item.href !== "/privacy").map((item) => (
                 <a key={item.href} href={item.href}>
                   {item.label}
                 </a>
@@ -43,14 +43,14 @@ export function SiteFooter() {
               <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="flex items-center gap-2">
                 <Code2 className="size-4" aria-hidden="true" /> Source repository
               </a>
-              <a href={`${WEBSITE_URL}/downloads/DadGPT.tar.gz`} download>
+              <a href="/downloads/DadGPT.tar.gz" download>
                 Download plugin source
               </a>
-              <a href={`${WEBSITE_URL}/downloads/DadGPT_custom_instructions.json`} download>
+              <a href="/downloads/DadGPT_custom_instructions.json" download>
                 Download legacy instructions
               </a>
-              <a href={`${WEBSITE_URL}/documents/Privacy-Policy.pdf`} target="_blank" rel="noreferrer">Privacy</a>
-              <a href={`${WEBSITE_URL}/documents/Terms-and-Conditions.pdf`} target="_blank" rel="noreferrer">Terms</a>
+              <a href="/documents/Privacy-Policy.pdf" target="_blank" rel="noreferrer">Privacy</a>
+              <a href="/documents/Terms-and-Conditions.pdf" target="_blank" rel="noreferrer">Terms</a>
             </div>
           </div>
         </div>

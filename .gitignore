@@ -1,0 +1,45 @@
+# Dependencies and package-manager state
+node_modules/
+.pnpm-store/
+.pnp
+.pnp.*
+
+# Next.js and generated output
+.next/
+out/
+dist/
+coverage/
+next-env.d.ts
+*.tsbuildinfo
+
+# Local hosting and editor state
+.vercel/
+.openai/
+.sites-runtime/
+.wrangler/
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+credentials.json
+secrets.json
+*.secret
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa
+id_ed25519
+

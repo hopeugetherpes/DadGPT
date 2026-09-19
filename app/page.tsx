@@ -11,7 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CHAT_URL, WEBSITE_URL } from "@/lib/site";
+import { CHAT_URL } from "@/lib/site";
 
 const supportAreas = [
   { icon: Compass, title: "Decisions and direction", text: "Slow down a difficult choice, name the trade-offs, and turn uncertainty into a next step you can own." },
@@ -50,7 +50,7 @@ export default function Home() {
                 <a href={CHAT_URL} target="_blank" rel="noreferrer">Open DadGPT in ChatGPT <ArrowUpRight aria-hidden="true" /></a>
               </Button>
               <Button asChild variant="outline" size="lg" className="home-secondary-action">
-                <Link href={`${WEBSITE_URL}/how-it-works`}>See how it works <ArrowRight aria-hidden="true" /></Link>
+                <Link href="/how-it-works">See how it works <ArrowRight aria-hidden="true" /></Link>
               </Button>
             </div>
             <div className="home-proof">
@@ -85,7 +85,7 @@ export default function Home() {
               <p>DadGPT creates a consistent style of conversation around those moments. It listens first, speaks directly without humiliation, and aims for useful action rather than empty reassurance.</p>
               <p>It cannot rewrite childhood or become a real parent. It can offer a structured pause — a place to name what is happening, hear a grounded perspective, and decide what you will do next.</p>
             </div>
-            <Link href={`${WEBSITE_URL}/project`} className="mt-7 inline-flex items-center gap-2 font-bold text-[#2479a1] underline decoration-[#2479a1]/30 underline-offset-4 hover:decoration-[#2479a1]">Read the project story <ArrowRight className="size-4" aria-hidden="true" /></Link>
+            <Link href="/project" className="mt-7 inline-flex items-center gap-2 font-bold text-[#2479a1] underline decoration-[#2479a1]/30 underline-offset-4 hover:decoration-[#2479a1]">Read the project story <ArrowRight className="size-4" aria-hidden="true" /></Link>
           </div>
         </div>
       </section>
@@ -137,7 +137,7 @@ export default function Home() {
             {["Not therapy or crisis support", "Not a real father or human relationship", "Not guaranteed to be accurate", "Designed to return decisions to you"].map((item) => (
               <div key={item} className="home-boundary-item">{item}</div>
             ))}
-            <Link href={`${WEBSITE_URL}/safety`} className="mt-3 inline-flex items-center gap-2 font-bold text-[#f0bc7b] hover:underline">Read the safety guide <ArrowRight className="size-4" aria-hidden="true" /></Link>
+            <Link href="/safety" className="mt-3 inline-flex items-center gap-2 font-bold text-[#f0bc7b] hover:underline">Read the safety guide <ArrowRight className="size-4" aria-hidden="true" /></Link>
           </div>
         </div>
       </section>

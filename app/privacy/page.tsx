@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, Database, EyeOff, ExternalLink, Server, ShieldCheck } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
-import { WEBSITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy",
@@ -75,7 +74,7 @@ export default function PrivacyPage() {
             <a href="https://openai.com/policies/terms-of-use/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 font-bold hover:bg-white/10">OpenAI Terms of Use <ExternalLink className="size-4" aria-hidden="true" /></a>
           </div>
         </div>
-        <p className="mt-8 text-center"><Link href={`${WEBSITE_URL}/safety`} className="inline-flex items-center gap-2 font-bold text-[#2479a1] hover:underline">Review the safety boundaries <ArrowRight className="size-4" aria-hidden="true" /></Link></p>
+        <p className="mt-8 text-center"><Link href="/safety" className="inline-flex items-center gap-2 font-bold text-[#2479a1] hover:underline">Review the safety boundaries <ArrowRight className="size-4" aria-hidden="true" /></Link></p>
       </section>
     </main>
   );

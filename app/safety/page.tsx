@@ -12,7 +12,6 @@ import {
   Stethoscope,
 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
-import { WEBSITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Safety and limitations",
@@ -94,7 +93,7 @@ export default function SafetyPage() {
       </section>
 
       <section className="py-18 md:py-20">
-        <div className="site-container text-center"><h2 className="display text-3xl text-[#174058] sm:text-4xl">Want to understand what happens to your messages?</h2><Link href={`${WEBSITE_URL}/privacy`} className="mt-5 inline-flex items-center gap-2 font-bold text-[#2479a1] hover:underline">Read the plain-language privacy guide <ArrowRight className="size-4" aria-hidden="true" /></Link></div>
+        <div className="site-container text-center"><h2 className="display text-3xl text-[#174058] sm:text-4xl">Want to understand what happens to your messages?</h2><Link href="/privacy" className="mt-5 inline-flex items-center gap-2 font-bold text-[#2479a1] hover:underline">Read the plain-language privacy guide <ArrowRight className="size-4" aria-hidden="true" /></Link></div>
       </section>
     </main>
   );

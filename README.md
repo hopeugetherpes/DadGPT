@@ -861,7 +861,7 @@ The project website currently uses:
 * **pnpm**
 * **Node.js 24.x**
 
-The repository also contains supporting tooling used by the project's development/build environment.
+The website uses the standard Next.js toolchain and does not require a separate backend or cloud-specific build wrapper.
 
 The DadGPT conversational behavior itself lives separately inside the plugin source and does not depend on the website being online.
 
@@ -942,13 +942,13 @@ pnpm lint
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhopeugetherpes%2FDadGPT)
 
-The repository includes a dedicated Vercel build command:
+The repository includes an explicit, zero-configuration Vercel build command:
 
 ```json
-"vercel-build": "next build"
+"buildCommand": "NEXT_TELEMETRY_DISABLED=1 pnpm run vercel-build"
 ```
 
-That means the website can be imported into Vercel as a normal Git repository and built as a Next.js project.
+The button imports the repository as a normal Next.js project, installs the frozen pnpm lockfile, and builds without requiring environment variables.
 
 A typical deployment flow is:
 
