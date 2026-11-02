@@ -1,0 +1,11 @@
+{
+  "name": "@dadgpt/minimatch-compat",
+  "version": "1.0.0",
+  "private": true,
+  "license": "CC0-1.0",
+  "type": "commonjs",
+  "main": "index.cjs",
+  "dependencies": {
+    "minimatch-patched": "npm:minimatch@11.0.1"
+  }
+}

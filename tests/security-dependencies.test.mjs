@@ -52,3 +52,48 @@ test("Next still detects Pages router HTML links with a globbed rootDir", async 
     JSON.stringify(result.messages),
   );
 });
+
+test("ESLint still applies ignore globs and lints included files", async () => {
+  const eslint = new ESLint({
+    overrideConfigFile: true,
+    overrideConfig: [
+      { ignores: ["**/generated/**"] },
+      { files: ["**/*.js"], rules: { "no-alert": "error" } },
+    ],
+  });
+  assert.equal(await eslint.isPathIgnored("app/generated/skip.js"), true);
+  assert.equal(await eslint.isPathIgnored("app/keep.js"), false);
+  const [result] = await eslint.lintText("alert('check');", { filePath: "app/keep.js" });
+  assert.ok(result.messages.some((message) => message.ruleId === "no-alert"));
+});
+
+test("React lint rules retain callable minimatch glob exceptions", async () => {
+  const react = configRequire("eslint-plugin-react");
+  const eslint = new ESLint({
+    overrideConfigFile: true,
+    overrideConfig: [{
+      files: ["**/*.jsx"],
+      languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } },
+      plugins: { react },
+      rules: { "react/jsx-pascal-case": ["error", { ignore: ["ALLOW_*"] }] },
+    }],
+  });
+  const [result] = await eslint.lintText(
+    "const Page = () => <><ALLOW_THIS /><BLOCK_THIS /></>;",
+    { filePath: "app/security-check.jsx" },
+  );
+  assert.equal(result.messages.length, 1, JSON.stringify(result.messages));
+  assert.equal(result.messages[0].ruleId, "react/jsx-pascal-case");
+  assert.match(result.messages[0].message, /BLOCK_THIS/);
+});
+
+test("React Hooks' Zod and validation-error dependencies remain compatible", () => {
+  const hooksRequire = createRequire(configRequire.resolve("eslint-plugin-react-hooks"));
+  const { z } = hooksRequire("zod/v4");
+  const { fromZodError } = hooksRequire("zod-validation-error/v4");
+  const schema = z.object({ count: z.number().int().positive() });
+  assert.deepEqual(schema.parse({ count: 1 }), { count: 1 });
+  const result = schema.safeParse({ count: -1 });
+  assert.equal(result.success, false);
+  assert.match(fromZodError(result.error).message, /count/);
+});
